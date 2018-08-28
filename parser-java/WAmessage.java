@@ -40,7 +40,7 @@ public class WAmessage {
         String q = "";
 
         q = "INSERT INTO `messages`(`id_message`,`date`,`time`,`sender`,`content_type`,`content`,`id_conversation`) VALUES (";
-        q +=  id_message + ", '" + date + "', '" + time + "', '" + sender + "', " + contentType + ", '" + content + "', " + id_conversation + ")";
+        q +=  id_message + ", '" + date + "', '" + time + "', '" + sender + "', " + contentType + ", '" + content + "', " + id_conversation + ");";
         
         return q; 
     }

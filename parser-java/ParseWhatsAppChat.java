@@ -7,10 +7,8 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
-import java.util.StringTokenizer;
 import java.util.ArrayList;
 import java.text.ParseException;
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 public class ParseWhatsAppChat {
@@ -20,7 +18,6 @@ public class ParseWhatsAppChat {
     private static String outputFileName = "filename.fn";
 
     //objects for working with strings
-    public static StringTokenizer st;
     public static InputStreamReader fi;
     public static BufferedReader fIN;
     public static OutputStreamWriter fo;
