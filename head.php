@@ -8,5 +8,5 @@
 <link href="css/style.css" rel="stylesheet" />
 
 <script src="js/jquery.min.js"></script>
-<script src="js/moment.min.js"></script>
+<script src="js/moment.js"></script>
 <script src="js/script.js"></script>

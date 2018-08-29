@@ -132,8 +132,8 @@ public class ParseWhatsAppChat {
             e.printStackTrace();
         }
         if(objDateTime != null) {
-            singleMsg.date = new SimpleDateFormat("dd/MM/yy").format(objDateTime);
-            singleMsg.time = new SimpleDateFormat("HH:mm").format(objDateTime);
+            singleMsg.date = "20" + new SimpleDateFormat("yy-MM-dd").format(objDateTime);
+            singleMsg.time = new SimpleDateFormat("HH:mm:ss").format(objDateTime);
         } else {
             singleMsg.date = "ERROR: Incorrect date format.";
             singleMsg.time = "ERROR: Incorrect time format.";

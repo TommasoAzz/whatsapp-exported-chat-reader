@@ -3,11 +3,11 @@
         <i class="zmdi zmdi-arrow-left"></i>
     </div>
     <div class="avatar">
-        <img src="https://avatars2.githubusercontent.com/u/398893?s=128" alt="Avatar">
+        <img id="profilePic" src="https://avatars2.githubusercontent.com/u/398893?s=128" alt="Avatar">
     </div>
     <div class="name">
-        <span>Zeno Rocha</span>
-        <span class="status">online</span>
+        <span id="profileName"></span>
+        <span class="status"></span>
     </div>
     <div class="actions more">
         <i class="zmdi zmdi-more-vert"></i>
