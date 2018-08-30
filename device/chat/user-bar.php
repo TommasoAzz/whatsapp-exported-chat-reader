@@ -1,13 +1,13 @@
 <div class="user-bar">
     <div class="back">
-        <i class="zmdi zmdi-arrow-left"></i>
+        <a id="btnChangeChat" href="#"><i class="zmdi zmdi-arrow-left"></i></a>
     </div>
     <div class="avatar">
-        <img id="profilePic" src="https://avatars2.githubusercontent.com/u/398893?s=128" alt="Avatar">
+        <img id="profilePic" src="/img/profile_pics/default0.jpg" alt="Avatar">
     </div>
     <div class="name">
-        <span id="profileName"></span>
-        <span class="status"></span>
+        <span id="profileName">Profile name</span>
+        <span class="status">offline</span>
     </div>
     <div class="actions more">
         <i class="zmdi zmdi-more-vert"></i>

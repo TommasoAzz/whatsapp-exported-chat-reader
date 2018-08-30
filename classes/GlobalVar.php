@@ -1,31 +1,30 @@
 <?php
-
 /**
-    Classe per la gestione degli array globali, per gestire il recupero di dati da essi
-    N.B: Non deve essere allocato, di conseguenza,
-    nella classe: self::$attributo
-                    self::metodo()
-    fuori classe: NomeClasse::$attributo
-                    NomeClasse::metodo()
+    Class for superglobal arrays management, to set and get their values
+    ATTENTION: It must not be allocated, therefore
+    inside the class:   self::$attribute >> to access class attributes
+                        self::method() >> to access class methods
+    outside the class:  GlobalVar::$attribute >> to access class attributes
+                        GlobalVar::method() >> to access class methods
 */
 
 class GlobalVar {
-    //attributi
-    //--per il controllo della inizializzazione
+    //ATTRIBUTES
+    //--to check initialization
     private static $initialized=false;
     
-    //metodi
-    //--costruttore (vuoto)
+    //METHODS
+    //--constructor (empty)
     private function __construct() {}
 
-    //--per l'inizializzazione
+    //--to initialize the class
     private static function init() {
         if(!self::$initialized) {
             self::$initialized=true;
         }
     }
 
-    //--per il recupero dati dagli array
+    //--to get filtered array data
     public static function getPost($key) {
         self::init();
         return filter_input(INPUT_POST,$key);

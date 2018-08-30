@@ -1,5 +1,4 @@
 <?php
-
 /**
     Classe per la gestione della Sessione, per gestire l'apertura e chiusura 
     di essa, il settaggio e il reperimento dei dati di sessione
@@ -11,26 +10,27 @@
 */
 
 class Session {
-    //attributi
-    //--per il controllo della inizializzazione
+    //ATTRIBUTES
+    //--to check initialization
     private static $initialized=false;
-    //--per la sicurezza della sessione
-    private static $nomeSessione='autogest-session';
+    
+    //--to secure the session
+    private static $nomeSessione='wa-exported-chat-reader-session';
     private static $secure=false; //true per HTTPS, false per HTTP
     private static $httponly=true;
 
-    //metodi
-    //--costruttore (vuoto)
+    //METHODS
+    //--constructor (empty)
     private function __construct() {}
 
-    //--per l'inizializzazione
+    //--to initialize the class
     private static function init() {
         if(!self::$initialized) {
             self::$initialized=true;
         }
     }
 
-    //--per l'apertura/chiusura della sessione
+    //--to open/close the session
     public static function open() {
         self::init();
 
@@ -58,14 +58,14 @@ class Session {
         session_destroy();
     }
 
-    //--per controllare se connessione e' http o https
+    //--to check if connection is HTTPS or HTTP
     public static function is_secure() {
         self::init();
         
         return self::$secure;
     }
     
-    //--per controllare se una variabile di sessione esiste
+    //--to check if a certain session variable is set
     public static function is_set($key) {
         self::init();
         
@@ -73,7 +73,7 @@ class Session {
         return $iss;
     }
     
-    //--per il set/get dei dati di sessione 
+    //--to set/get session variables
     public static function set($key,$value) {
         self::init();
         

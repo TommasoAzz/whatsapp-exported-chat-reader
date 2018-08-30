@@ -9,7 +9,4 @@
     <div class="wifi">
         <i class="zmdi zmdi-wifi-alt-2"></i>
     </div>
-    <div class="star">
-        <i class="zmdi zmdi-star"></i>
-    </div>
 </div>
