@@ -3,6 +3,7 @@ require_once "../loadClasses.php";
 require_once "../connectToDB.php";
 
 if(GlobalVar::getServer("REQUEST_METHOD")==="POST") {
+    header('Content-type: text/html; charset=utf-8');
     $id_sender = GlobalVar::getPost("id_sender");
     $id_receiver = GlobalVar::getPost("id_receiver");
 
@@ -11,7 +12,7 @@ if(GlobalVar::getServer("REQUEST_METHOD")==="POST") {
     if(!$receiver) echo "error_receiver_data";
     else {
         $jsonData=json_encode($receiver[0]);
-        header('Content-type: text/html; charset=utf-8');
+        
         echo $jsonData;
     }
 } else {

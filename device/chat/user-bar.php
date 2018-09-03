@@ -1,6 +1,6 @@
 <div class="user-bar">
     <div class="back">
-        <a id="btnChangeChat" href="#"><i class="zmdi zmdi-arrow-left"></i></a>
+        <i class="zmdi zmdi-arrow-left"></i>
     </div>
     <div class="avatar">
         <img id="profilePic" src="/img/profile_pics/default0.jpg" alt="Avatar">

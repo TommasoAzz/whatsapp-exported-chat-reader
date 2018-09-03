@@ -3,6 +3,8 @@ require_once "../loadClasses.php";
 require_once "../connectToDB.php";
 
 if(GlobalVar::getServer("REQUEST_METHOD")==="POST") {
+    header('Content-type: text/html; charset=utf-8');
+    mb_internal_encoding("UTF-8");
     $id_conversation = GlobalVar::getPost("id_conversation");
     $beginDate = GlobalVar::getPost("beginDate");
     $endDate = GlobalVar::getPost("endDate");
@@ -15,9 +17,11 @@ if(GlobalVar::getServer("REQUEST_METHOD")==="POST") {
     if(!$r_messages) echo "error_messages";
     else {
         $jsonData = json_encode($r_messages);
-        header('Content-type: text/html; charset=utf-8');
+        
         echo $jsonData;
     }
+
+    //echo mb_detect_encoding($r_messages[0]["content"]);
 } else {
     header("Location: ../");
 }

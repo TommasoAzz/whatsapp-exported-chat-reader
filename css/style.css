@@ -18,6 +18,18 @@ body {
 	height: 100%;
 }
 
+/* Prevents img without src to appear */
+img:not([src]) {
+    visibility: hidden;
+}
+
+/* for img elements in MS Edge */
+img[data-src],
+img[data-srcset] {
+  display: block;
+  min-height: 1px;
+}
+
 .page {
 	width: 100%;
 	height: 100%;
@@ -78,7 +90,7 @@ body {
 	padding: 0 8px;
 	font-size: 24px;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 }
 
 .user-bar:after {
@@ -155,7 +167,7 @@ a#btnChangeChat:after {
 .conversation {
 	height: calc(100% - 12px);
 	position: relative;
-	background: #efe7dd url("https://cloud.githubusercontent.com/assets/398893/15136779/4e765036-1639-11e6-9201-67e728e86f39.jpg") repeat;
+	background: #efe7dd url("/img/backgrounds/default.jpg") repeat;
 	z-index: 0;
 }
 
@@ -200,7 +212,7 @@ a#btnChangeChat:after {
 	margin: 8px 0;
 	max-width: 85%;
 	word-wrap: break-word;
-	z-index: -1;
+	z-index: 1;
 }
 
 .message:after {
@@ -306,7 +318,7 @@ a#btnChangeChat:after {
 	overflow: hidden;
 	height: 50px;
 	width: 100%;
-	z-index: 2;
+	z-index: 3;
 }
 
 .conversation-compose div,

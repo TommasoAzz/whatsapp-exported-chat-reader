@@ -58,6 +58,7 @@ class Database {
     public function connect() {
         if($this->conn == null) {
             $this->conn = new mysqli($this->hostname, $this->username, $this->password, $this->db_name);
+            $this->conn->set_charset('UTF-8');
             if($this->checkConnection()) {
                 $this->conn->autocommit(TRUE);
             }
