@@ -359,8 +359,6 @@ $(document).ready(function() {
 		$cmdInput.val("");
 
 		if(cmd === "choose") {
-			let id_receiver = getCookie("id_receiver");
-
 			changeConversation();
 		} else if(cmd === "switch") {
 			let id_receiver = getCookie("id_receiver");

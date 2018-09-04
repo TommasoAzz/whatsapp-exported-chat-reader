@@ -7,7 +7,7 @@ if(GlobalVar::getServer("REQUEST_METHOD")==="POST") {
 
     $conversations = $db->queryDB("SELECT * FROM conversations");
     
-    $result = "";
+    $result = "error_conversations";
     if($conversations) {
         $table = []; //$table because result will be shown in a table
         $stop = false; //boolean to stop for-loop to end if it encounters any error
